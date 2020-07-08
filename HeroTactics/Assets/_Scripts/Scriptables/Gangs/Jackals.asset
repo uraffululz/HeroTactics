@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea61df7513088e469e005fb7a410bf6, type: 3}
+  m_Name: Jackals
+  m_EditorClassIdentifier: 
+  myGang: 1
+  gangColor: {r: 1, g: 0, b: 0, a: 0}
+  gangClues:
+  - Jackals Clue 1
+  - Jackals Clue 2
+  - Jackals Clue 3
+  level1Enemies:
+  - {fileID: 11400000, guid: 808c9416d53980d458af9f5204fcc05b, type: 2}
