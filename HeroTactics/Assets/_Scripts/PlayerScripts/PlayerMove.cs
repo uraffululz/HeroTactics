@@ -39,6 +39,7 @@ public class PlayerMove : MonoBehaviour {
 
 		towardPos = new Vector3(transform.position.x + ((Input.GetAxis("Horizontal") * moveSpeed)), 0f, transform.position.z + ((Input.GetAxis("Vertical") * moveSpeed)));
 
+//TODO Rotate faster
 		transform.LookAt(towardPos);
 	}
 

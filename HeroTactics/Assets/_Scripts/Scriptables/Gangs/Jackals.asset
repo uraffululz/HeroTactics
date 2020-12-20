@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea61df7513088e469e005fb7a410bf6, type: 3}
   m_Name: Jackals
   m_EditorClassIdentifier: 
-  myGang: 1
+  myGang: 2
   gangColor: {r: 1, g: 0, b: 0, a: 0}
   gangClues:
   - Jackals Clue 1

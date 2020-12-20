@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea61df7513088e469e005fb7a410bf6, type: 3}
   m_Name: Eldritch
   m_EditorClassIdentifier: 
-  myGang: 0
+  myGang: 1
   gangColor: {r: 0.17354931, g: 0.49056602, b: 0.18448922, a: 0}
   gangClues:
   - Eldritch Clue 1
   - Eldritch Clue 2
   - Eldritch Clue 3
+  level1Enemies: []

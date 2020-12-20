@@ -76,14 +76,18 @@
     <Compile Include="Assets\_Scripts\Scriptables\Gangs\Enemies\EnemyScriptable.cs" />
     <Compile Include="Assets\_Scripts\Scriptables\GangScriptable.cs" />
     <Compile Include="Assets\_Scripts\Scriptables\LocationScriptable.cs" />
+    <Compile Include="Assets\Activity_EnemyAttack.cs" />
+    <Compile Include="Assets\Activity_EnemyTurnManager.cs" />
+    <Compile Include="Assets\Activity_HeroMove.cs" />
+    <Compile Include="Assets\Activity_HeroTurnManager.cs" />
+    <Compile Include="Assets\ActivityManager.cs" />
+    <Compile Include="Assets\Arena_HexScript.cs" />
     <Compile Include="Assets\ArenaSceneEventManager.cs" />
     <Compile Include="Assets\ArenaSceneManager.cs" />
     <Compile Include="Assets\ArenaSceneUIManager.cs" />
-    <Compile Include="Assets\Combat_EnemyMove.cs" />
-    <Compile Include="Assets\Combat_PlayerMove.cs" />
-    <Compile Include="Assets\CombatManager.cs" />
     <Compile Include="Assets\HealthScript.cs" />
-    <Compile Include="Assets\UnitCanvasManager.cs" />
+    <Compile Include="Assets\HeroCanvasManager.cs" />
+    <Compile Include="Assets\NodeManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Master/Documents/Git Repositories/Unity Projects/HeroTactics/HeroTactics/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

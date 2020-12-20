@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ArenaSceneUIManager : MonoBehaviour {
 
+	public GameObject introUI;
+
 	[SerializeField] Text turnText;
 
 	public GameObject winUI;
@@ -23,16 +25,16 @@ public class ArenaSceneUIManager : MonoBehaviour {
         
     }
 
-	public void UpdateTurnText(combatStates whoseTurn) {
-		switch (whoseTurn) {
-			case combatStates.PlayerTurn: turnText.text = "<Color=#0000ffff>PLAYER TURN</color>";
-				break;
-			case combatStates.EnemyTurn: turnText.text = "<Color=#ff0000ff>ENEMY TURN</color>";
-				break;
-			default:
-				break;
-		}
-	}
+	//public void UpdateTurnText(combatStates whoseTurn) {
+	//	switch (whoseTurn) {
+	//		case combatStates.PlayerTurn: turnText.text = "<Color=#0000ffff>PLAYER TURN</color>";
+	//			break;
+	//		case combatStates.EnemyTurn: turnText.text = "<Color=#ff0000ff>ENEMY TURN</color>";
+	//			break;
+	//		default:
+	//			break;
+	//	}
+	//}
 
 
 	public void UpdateWinUI() {

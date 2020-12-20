@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GangScriptable", menuName = "Scriptables/EventScripts/GangScript", order = 0)]
 public class GangScriptable : ScriptableObject {
 
-	public enum gangs { Eldritch, Jackals };
+	public enum gangs { Cyborgs, Eldritch, Jackals };
 	public gangs myGang;
 	public Color gangColor;
 

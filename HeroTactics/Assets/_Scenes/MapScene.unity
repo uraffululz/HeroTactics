@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -1, z: 0}
+  m_LocalPosition: {x: 1.38, y: 2.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1240338671}
@@ -224,9 +224,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d309d87aeef49804f912cabbb6627a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nodeMan: {fileID: 1240338672}
   myLocationScript: {fileID: 11400000, guid: d1632f59efb75fd449b222d70f761794, type: 2}
+  neighborNodes:
+  - {fileID: 1998194421}
+  - {fileID: 741761696}
+  - {fileID: 364959575}
   activeGangScript: {fileID: 0}
-  controllingGangScript: {fileID: 11400000, guid: 6016b2922ac205747987da51ac2462e5,
+  controllingGangIsStatic: 0
+  controllingGangScript: {fileID: 11400000, guid: ad9a35a99fd4e99478b960dd2beea33f,
     type: 2}
   myStatus: Pretty good
   difficulty: 0
@@ -528,7 +534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352122067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.42, y: 2, z: 0}
+  m_LocalPosition: {x: -4.19, y: 1.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1240338671}
@@ -546,8 +552,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d309d87aeef49804f912cabbb6627a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nodeMan: {fileID: 1240338672}
   myLocationScript: {fileID: 11400000, guid: 42cf1db274ae5b34bb1f5a12a70cd020, type: 2}
+  neighborNodes:
+  - {fileID: 741761696}
+  - {fileID: 1525028879}
   activeGangScript: {fileID: 0}
+  controllingGangIsStatic: 0
   controllingGangScript: {fileID: 11400000, guid: e075a00541674ae468749480c4852ebf,
     type: 2}
   myStatus: Chillin'
@@ -639,7 +650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364959575}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.89, y: 2, z: 0}
+  m_LocalPosition: {x: 3.78, y: -1.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1240338671}
@@ -657,8 +668,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d309d87aeef49804f912cabbb6627a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nodeMan: {fileID: 1240338672}
   myLocationScript: {fileID: 11400000, guid: 323c3563d68ee0f4581cf7dc7acafd0e, type: 2}
+  neighborNodes:
+  - {fileID: 1998194421}
+  - {fileID: 381489}
+  - {fileID: 616529404}
   activeGangScript: {fileID: 0}
+  controllingGangIsStatic: 0
   controllingGangScript: {fileID: 11400000, guid: 6016b2922ac205747987da51ac2462e5,
     type: 2}
   myStatus: Chillin'
@@ -926,8 +943,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d309d87aeef49804f912cabbb6627a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nodeMan: {fileID: 1240338672}
   myLocationScript: {fileID: 11400000, guid: f1a9066a1688b6e44bfb285cc02c68c6, type: 2}
+  neighborNodes:
+  - {fileID: 364959575}
   activeGangScript: {fileID: 0}
+  controllingGangIsStatic: 1
   controllingGangScript: {fileID: 11400000, guid: 6016b2922ac205747987da51ac2462e5,
     type: 2}
   myStatus: Pretty good
@@ -1019,7 +1040,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741761696}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.74, y: -2.13, z: 0}
+  m_LocalPosition: {x: -0.84, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1240338671}
@@ -1037,8 +1058,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d309d87aeef49804f912cabbb6627a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nodeMan: {fileID: 1240338672}
   myLocationScript: {fileID: 11400000, guid: 9ae81fa194a8ed341bba0b6305547aea, type: 2}
+  neighborNodes:
+  - {fileID: 381489}
+  - {fileID: 352122067}
+  - {fileID: 1998194421}
   activeGangScript: {fileID: 0}
+  controllingGangIsStatic: 0
   controllingGangScript: {fileID: 11400000, guid: e075a00541674ae468749480c4852ebf,
     type: 2}
   myStatus: Pretty good
@@ -1695,6 +1722,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1240338671}
+  - component: {fileID: 1240338672}
   m_Layer: 0
   m_Name: NodeParent
   m_TagString: Untagged
@@ -1724,6 +1752,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1240338672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240338670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e5ded52d7dad546bf0478eae08b912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locationNodes:
+  - {fileID: 1998194421}
+  - {fileID: 741761696}
+  - {fileID: 381489}
+  - {fileID: 616529404}
+  - {fileID: 1774238410}
+  - {fileID: 352122067}
+  - {fileID: 364959575}
+  - {fileID: 1525028879}
+  gangWarNodeColor: {r: 0, g: 1, b: 0, a: 0}
+  highTierNodeColor: {r: 1, g: 1, b: 0, a: 0}
+  gangWarAttackers: {fileID: 0}
 --- !u!1 &1346498255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,7 +2007,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525028879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.42, y: 4.26, z: 0}
+  m_LocalPosition: {x: -7.09, y: 2.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1240338671}
@@ -1973,8 +2025,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d309d87aeef49804f912cabbb6627a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nodeMan: {fileID: 1240338672}
   myLocationScript: {fileID: 11400000, guid: 050083483dc091c49a13a61530921900, type: 2}
+  neighborNodes:
+  - {fileID: 352122067}
   activeGangScript: {fileID: 0}
+  controllingGangIsStatic: 1
   controllingGangScript: {fileID: 11400000, guid: e075a00541674ae468749480c4852ebf,
     type: 2}
   myStatus: Chillin'
@@ -2403,7 +2459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774238410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 2, z: 0}
+  m_LocalPosition: {x: 2.99, y: 5.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1240338671}
@@ -2421,9 +2477,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d309d87aeef49804f912cabbb6627a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nodeMan: {fileID: 1240338672}
   myLocationScript: {fileID: 11400000, guid: 2792ff8ca2cb0774791d56575776b6e4, type: 2}
+  neighborNodes:
+  - {fileID: 381489}
   activeGangScript: {fileID: 0}
-  controllingGangScript: {fileID: 11400000, guid: e075a00541674ae468749480c4852ebf,
+  controllingGangIsStatic: 1
+  controllingGangScript: {fileID: 11400000, guid: ad9a35a99fd4e99478b960dd2beea33f,
     type: 2}
   myStatus: Chillin'
   difficulty: 0
@@ -2684,7 +2744,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998194421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.33, y: -3.22, z: 0}
+  m_LocalPosition: {x: 1.51, y: -3.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1240338671}
@@ -2702,8 +2762,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d309d87aeef49804f912cabbb6627a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nodeMan: {fileID: 1240338672}
   myLocationScript: {fileID: 11400000, guid: 582f42832e1987542951ea59ab250c1c, type: 2}
+  neighborNodes:
+  - {fileID: 741761696}
+  - {fileID: 364959575}
   activeGangScript: {fileID: 0}
+  controllingGangIsStatic: 0
   controllingGangScript: {fileID: 11400000, guid: 6016b2922ac205747987da51ac2462e5,
     type: 2}
   myStatus: Pretty good

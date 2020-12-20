@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class NodeDetails : MonoBehaviour {
 
+	[SerializeField] NodeManager nodeMan;
+
 	public LocationScriptable myLocationScript;
+	public GameObject[] neighborNodes; //To be used during gang wars, to determine nodes within proximity to be usurped
 	public GangScriptable activeGangScript;
+	public bool controllingGangIsStatic; //To be used during gang wars, to make sure that each gang's "home node" can't be usurped
 	public GangScriptable controllingGangScript;
-	//GangScriptable currentEventGangScript;
 	//public Color myColor;
 
 	public string myStatus;
@@ -30,6 +33,14 @@ public class NodeDetails : MonoBehaviour {
 			myStatus = ClueMaster.currentEventAttack.myAttackType.ToString();
 			difficulty = Random.Range(4, 6);
 		}
+		else if (myStatus == "Gang War") {
+			activeGangScript = nodeMan.gangWarAttackers;
+
+			GetComponent<MeshRenderer>().material.color = nodeMan.gangWarNodeColor;
+
+			print("Gang war at the " + myLocationScript.locationName + ": " + activeGangScript.myGang + " vs " + controllingGangScript.myGang);
+
+		}
 		else {
 			activeGangScript = controllingGangScript;
 			GetComponent<MeshRenderer>().material.color = controllingGangScript.gangColor;
@@ -47,8 +58,14 @@ public class NodeDetails : MonoBehaviour {
         
     }
 
+
 	void OnMouseDown () {
 		mapSceneManager.locationSceneToLoad = myLocationScript.locationSceneIndex;
 		MSUIM.UpdateNodeInfoUI(this);
+	}
+
+
+	void GangWar() {
+
 	}
 }
