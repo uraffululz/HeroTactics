@@ -9,13 +9,24 @@ public class Activity_HeroTurnManager : MonoBehaviour {
 
 	Activity_HeroMove moveScript;
 
-	[SerializeField] HeroCanvasManager myCanvas;
+	public HeroCanvasManager myCanvas;
+	public Animator anim;
 
-	public bool playerTurnComplete;
+	public enum Actions { none, idle, moving, attacking };
+	public Actions currentAction;
+
+	//public bool playerTurnComplete;
 	public bool heroTurnComplete;
+
+	public GameObject currentHex;
+
 
 	public int maxActionPoints;
 	public int actionPoints;
+
+	public int moveCost = 1;
+	
+	public int attackCost = 2;
 
 
 	void Awake () {
@@ -35,33 +46,67 @@ public class Activity_HeroTurnManager : MonoBehaviour {
 
 	public void StartHeroTurn () {
 		//GetComponent<NavMeshAgent>().enabled = true;
-		moveScript.currentAction = Activity_HeroMove.Actions.idle;
+		currentAction = Actions.idle;
 		moveScript.hasMoved = false;
 
-		playerTurnComplete = false;
+		//playerTurnComplete = false;
 		heroTurnComplete = false;
 
-		if (actionPoints > 0) {
-			myCanvas.EnableActionButtons();
-		}
+		SetupActionUI();
+
+		//if (actionPoints > 0) {
+		//	myCanvas.EnableActionButtons();
+		//}
 
 		print("Starting Hero Turn");
 	}
 
 
+	public void EndHeroAction() {
+		if (actionPoints > 0) {
+			SetupActionUI();
+		}
+		else {
+			EndHeroTurn();
+		}
+	}
+
+
+	public void SetupActionUI() {
+		bool hasMovePoints = false;
+		bool hasAttackPoints = false;
+
+		if (actionPoints >= moveCost) {
+			hasMovePoints = true;
+		}
+
+		if (actionPoints >= attackCost) {
+			hasAttackPoints = true;
+		}
+
+		myCanvas.EnableActionButtons(hasMovePoints, hasAttackPoints);
+	}
+
+
 	public void EndHeroTurn () {
+		currentAction = Actions.idle;
+
 		heroTurnComplete = true;
+		bool playerTurnComplete = true;
 
 		foreach (GameObject hero in actMan.heroes) {
 			if (!hero.GetComponent<Activity_HeroTurnManager>().heroTurnComplete) {
-//TODO Allow the player to select any hero with remaining action points
-//ALTERNATIVELY Allow selection of ANY hero, in order to at least see their stats, even if all action points are spent
-				actMan.StartPlayerTurn();
-				
+				playerTurnComplete = false;
 			}
-			else {
-				actMan.EndPlayerTurn();
-			}
+		}
+
+		if (!playerTurnComplete) {
+			actMan.ContinuePlayerTurn();
+		}
+		//TODO Allow the player to select any hero with remaining action points
+		//ALTERNATIVELY Allow selection of ANY hero, in order to at least see their stats, even if all action points are spent
+		else {
+			actMan.EndPlayerTurn();
 		}
 	}
 

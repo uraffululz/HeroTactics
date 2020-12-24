@@ -166,7 +166,6 @@ GameObject:
   - component: {fileID: 489764406}
   - component: {fileID: 489764405}
   - component: {fileID: 489764404}
-  - component: {fileID: 489764407}
   m_Layer: 8
   m_Name: EnemyCanvas
   m_TagString: Untagged
@@ -257,22 +256,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &489764407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489764402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ee04cb332b861144a3dfcfed4af0a92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUnit: {fileID: 0}
-  hpBar: {fileID: 1969423621}
-  moveButton: {fileID: 775410880}
-  attackButton: {fileID: 1108386087}
 --- !u!1 &775410876
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,7 +587,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 489764407}
+      - m_Target: {fileID: 0}
         m_MethodName: InitiatePlayerAttack
         m_Mode: 2
         m_Arguments:
@@ -1102,6 +1085,9 @@ GameObject:
   - component: {fileID: 1903572343}
   - component: {fileID: 8732548865891272516}
   - component: {fileID: 6193857069841631098}
+  - component: {fileID: 1395548247}
+  - component: {fileID: 1395548254}
+  - component: {fileID: 1395548248}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
@@ -1136,7 +1122,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
@@ -1151,8 +1137,8 @@ Rigidbody:
   m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -1188,6 +1174,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
+--- !u!114 &1395548247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2441343474003531821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73eb9807a3f17844eac6d76da461c4da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTargetable: 1
+  aggroTarget: {fileID: 0}
+--- !u!114 &1395548254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2441343474003531821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 526b31b1e8fbc354690d615381598bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actMan: {fileID: 0}
+--- !u!114 &1395548248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2441343474003531821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2597c14b0fd674ba7e5e2a40433b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2681953261928498403
 GameObject:
   m_ObjectHideFlags: 0

@@ -77,7 +77,9 @@
     <Compile Include="Assets\_Scripts\Scriptables\GangScriptable.cs" />
     <Compile Include="Assets\_Scripts\Scriptables\LocationScriptable.cs" />
     <Compile Include="Assets\Activity_EnemyAttack.cs" />
+    <Compile Include="Assets\Activity_EnemyMove.cs" />
     <Compile Include="Assets\Activity_EnemyTurnManager.cs" />
+    <Compile Include="Assets\Activity_HeroAttack.cs" />
     <Compile Include="Assets\Activity_HeroMove.cs" />
     <Compile Include="Assets\Activity_HeroTurnManager.cs" />
     <Compile Include="Assets\ActivityManager.cs" />

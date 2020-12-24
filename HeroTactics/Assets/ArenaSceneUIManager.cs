@@ -25,16 +25,18 @@ public class ArenaSceneUIManager : MonoBehaviour {
         
     }
 
-	//public void UpdateTurnText(combatStates whoseTurn) {
-	//	switch (whoseTurn) {
-	//		case combatStates.PlayerTurn: turnText.text = "<Color=#0000ffff>PLAYER TURN</color>";
-	//			break;
-	//		case combatStates.EnemyTurn: turnText.text = "<Color=#ff0000ff>ENEMY TURN</color>";
-	//			break;
-	//		default:
-	//			break;
-	//	}
-	//}
+	public void UpdateTurnText (ActivityManager.whoseTurn turn) {
+		switch (turn) {
+			case ActivityManager.whoseTurn.playerTurn:
+				turnText.text = "<Color=#0000ffff>PLAYER TURN</color>";
+				break;
+			case ActivityManager.whoseTurn.enemyTurn:
+				turnText.text = "<Color=#ff0000ff>ENEMY TURN</color>";
+				break;
+			default:
+				break;
+		}
+	}
 
 
 	public void UpdateWinUI() {

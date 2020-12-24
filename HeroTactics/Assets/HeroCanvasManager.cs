@@ -54,8 +54,15 @@ public class HeroCanvasManager : MonoBehaviour {
 	}
 
 
-	public void EnableActionButtons() {
-		moveButton.gameObject.SetActive(true);
+	public void EnableActionButtons(bool canMove, bool canAttack) {
+		if (canMove) {
+			moveButton.gameObject.SetActive(true);
+		}
+
+		if (canAttack) {
+			attackButton.gameObject.SetActive(true);
+		}
+
 
 		////if (combatManager.currentCombatState == combatStates.PlayerTurn) {
 		//	//foreach (var hero in combatManager.heroes) {

@@ -6,6 +6,8 @@ public class Activity_EnemyTurnManager : MonoBehaviour {
 
 	ActivityManager actMan;
 
+	public bool isTargetable;
+
 	int actionPoints;
 
 	int moveRange = 3;
